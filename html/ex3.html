@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>The hard thing about deep learning - O'Reilly Media</title>
+</head>
+<body>
+<div id="article-body">
+<p>At the heart of deep learning lies a hard optimization problem. So hard that for several decades after the introduction of neural networks, the difficulty of optimization on deep neural networks was a barrier to their mainstream usage and contributed to their <a href="https://books.google.com/ngrams/graph?content=neural+network%2Cmachine+learning&amp;case_insensitive=on&amp;year_start=1960&amp;year_end=2007&amp;corpus=15&amp;smoothing=2"> decline in the 1990s and 2000s</a>. Since then, we have overcome this issue. In this post, I explore the hardness in optimizing neural networks and see what the theory has to say. In a nutshell: the deeper the network becomes, the harder the optimization problem becomes.</p>
+<p>The simplest neural network is the single-node <em>perceptron</em>, whose optimization problem is <em>convex</em>. The nice thing about convex optimization problems is that all local minima are also global minima. There is a <a href="https://en.wikipedia.org/wiki/Convex_optimization#Methods">rich variety of optimization algorithms</a> to handle convex optimization problems, and every few years a better polynomial-time algorithm for convex optimization is discovered. Optimizing weights for a single neuron is easy using convex optimization (see graphic below). Lets see what happens when we go past a single neuron.</p>
+<p>The next natural step is to add many neurons, while keeping a single layer. For the <a href="https://en.wikipedia.org/wiki/Perceptron">single-layer, n-node perceptron</a> neural network, <em>if there exist</em> edge weights so that the network correctly classifies a given training set, then such weights can be found in polynomial time in <em>n</em> using <a href="https://en.wikipedia.org/wiki/Linear_programming">linear programming</a>, which is also a special subset of convex optimization. A natural question arises: can we make similar guarantees about deeper neural networks, with more than one layer? Unfortunately not.</p>
+<p>To provably solve optimization problems for general neural networks with two or more layers, the algorithms that would be necessary hit some of the biggest open problems in computer science. So, we don't think there's much hope for machine learning researchers to try to find algorithms that are <em>provably</em> optimal for deep networks. This is because the problem is <a href="https://en.wikipedia.org/wiki/NP-hardness">NP-hard</a>, meaning that provably solving it in polynomial time would also solve thousands of open problems that have been open for decades. Indeed, in 1988 <a href="http://authors.library.caltech.edu/26705/1/88-20.pdf">J. Stephen Judd</a> shows the following problem to be NP-hard:</p>
+<p>Given a general neural network and a set of training examples, does there exist a set of edge weights for the network so that the network produces the correct output for all the training examples?</p>
+</div>
+<div class="text-group">
+        <p class="dek">
+         Reza Zadeh is an Adjunct Professor at Stanford University, and Founder and CEO at Matroid. His work focuses on machine learning, distributed computing, and discrete applied mathematics. He has served on the Technical Advisory Board of Microsoft and Databricks.
+        </p>
+  <p class="copyright">
+    2016 O'Reilly Media, Inc. All trademarks and registered trademarks appearing on oreilly.com are the property of their respective owners.
+  </p>
+</div>
+
+</body>
+</html>

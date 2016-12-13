@@ -2,11 +2,13 @@
 # encoding: utf-8
 
 from bs4 import BeautifulSoup
+from collections import defaultdict
 from collections import namedtuple
-import textblob
 import json
+import math
 import re
 import sys
+import textblob
 import textblob_aptagger as tag
 import unicodedata
 
@@ -59,12 +61,6 @@ def annotate (sent):
     yield WordNode(raw=raw, pos=pos, root=root)
 
 
-def json_iter (path):
-  with open(path, "r") as f:
-    for line in f.readlines():
-      yield json.loads(line)
-
-
 def pretty_print (obj, indent=False):
   if indent:
     return json.dumps(obj, sort_keys=True, indent=2, separators=(',', ': '))
@@ -83,6 +79,23 @@ def full_parse (html_file, json_file):
     for sent_lex in parse_html(html_file):
       f.write(pretty_print(sent_lex))
       f.write("\n")
+
+
+def lex_iter (json_file):
+  with open(json_file, "r") as f:
+    for line in f.readlines():
+      for lex in list(map(WordNode._make, json.loads(line))):
+        yield lex
+
+
+def load_stopwords (file):
+  stopwords = set([])
+
+  with open(file, "r") as f:
+    for line in f.readlines():
+      stopwords.add(line.strip().lower())
+
+  return stopwords
 
 
 if __name__ == "__main__":

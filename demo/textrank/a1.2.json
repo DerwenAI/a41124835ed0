@@ -1,0 +1,89 @@
+{"count": 1, "ids": [27, 1], "pos": "np", "rank": 0.039367185415757115, "text": "last year"}
+{"count": 1, "ids": [5, 6, 49], "pos": "np", "rank": 0.034892319158073094, "text": "machine intelligence methods"}
+{"count": 1, "ids": [35, 31], "pos": "np", "rank": 0.03315770427568515, "text": "meaningful problems"}
+{"count": 1, "ids": [14, 15, 7], "pos": "np", "rank": 0.032391482976381655, "text": "third more companies"}
+{"count": 1, "ids": [39, 40], "pos": "np", "rank": 0.03156171151782784, "text": "software development"}
+{"count": 1, "ids": [53, 54], "pos": "np", "rank": 0.03137262806417502, "text": "deep learning"}
+{"count": 2, "ids": [5, 6], "pos": "np", "rank": 0.03026256568446191, "text": "machine intelligence"}
+{"count": 1, "ids": [35, 57], "pos": "np", "rank": 0.02876770305604013, "text": "meaningful breakthroughs"}
+{"count": 1, "ids": [3, 4], "pos": "np", "rank": 0.02778888917364103, "text": "now-annual landscape"}
+{"count": 1, "ids": [78, 79], "pos": "np", "rank": 0.02686978626060747, "text": "different mix"}
+{"count": 2, "ids": [5, 6, 7], "pos": "np", "rank": 0.026469973117549197, "text": "machine intelligence companies"}
+{"count": 1, "ids": [76, 77], "pos": "np", "rank": 0.026255194893387672, "text": "inbound inquiries"}
+{"count": 1, "ids": [61, 62], "pos": "np", "rank": 0.02594621912220959, "text": "big data"}
+{"count": 1, "ids": [85, 79], "pos": "np", "rank": 0.025897417635289705, "text": "healthy mix"}
+{"count": 1, "ids": [27, 28], "pos": "np", "rank": 0.025162733613335948, "text": "last couple"}
+{"count": 1, "ids": [68, 17], "pos": "np", "rank": 0.024025678786659475, "text": "fanciest one"}
+{"count": 1, "ids": [73, 74], "pos": "np", "rank": 0.0239434577682061, "text": "biggest change"}
+{"count": 1, "ids": [67, 49], "pos": "np", "rank": 0.02324167152545991, "text": "right method"}
+{"count": 1, "ids": [46, 47], "pos": "np", "rank": 0.022314362218970298, "text": "same time"}
+{"count": 1, "ids": [59, 60], "pos": "np", "rank": 0.022314362218970298, "text": "hyped phrase"}
+{"count": 5, "ids": [1], "pos": "nn", "rank": 0.01848112016343389, "text": "year"}
+{"count": 4, "ids": [7], "pos": "nns", "rank": 0.018100718697460636, "text": "companies"}
+{"count": 6, "ids": [5], "pos": "nn", "rank": 0.017693619655362813, "text": "machine"}
+{"count": 6, "ids": [6], "pos": "nn", "rank": 0.015561030099294935, "text": "intelligence"}
+{"count": 3, "ids": [31], "pos": "nn", "rank": 0.013984801691472554, "text": "problem"}
+{"count": 1, "ids": [40], "pos": "nn", "rank": 0.011507244310258704, "text": "development"}
+{"count": 1, "ids": [54], "pos": "nn", "rank": 0.011340800681930729, "text": "learning"}
+{"count": 2, "ids": [34], "pos": "vb", "rank": 0.010890875370154788, "text": "solve"}
+{"count": 1, "ids": [38], "pos": "vbg", "rank": 0.010350515461278775, "text": "recruiting"}
+{"count": 1, "ids": [52], "pos": "nns", "rank": 0.01013348223025323, "text": "words"}
+{"count": 1, "ids": [37], "pos": "nn", "rank": 0.010033700578634924, "text": "security"}
+{"count": 1, "ids": [51], "pos": "vb", "rank": 0.009778182929371224, "text": "grow"}
+{"count": 1, "ids": [36], "pos": "nns", "rank": 0.009658579598797085, "text": "areas"}
+{"count": 2, "ids": [21], "pos": "vbg", "rank": 0.009269904917219324, "text": "trying"}
+{"count": 2, "ids": [33], "pos": "vbp", "rank": 0.009198496176376799, "text": "invest"}
+{"count": 2, "ids": [13], "pos": "vbz", "rank": 0.008958640202984917, "text": "has"}
+{"count": 2, "ids": [4], "pos": "nn", "rank": 0.008937998000715097, "text": "landscape"}
+{"count": 1, "ids": [45], "pos": "nns", "rank": 0.008136072191127736, "text": "others"}
+{"count": 1, "ids": [80], "pos": "nns", "rank": 0.008020276431274571, "text": "people"}
+{"count": 2, "ids": [49], "pos": "nn", "rank": 0.007125793551170357, "text": "method"}
+{"count": 2, "ids": [29], "pos": "nn", "rank": 0.007059429587930394, "text": "fund"}
+{"count": 1, "ids": [90], "pos": "vb", "rank": 0.007013450090080701, "text": "figure"}
+{"count": 1, "ids": [50], "pos": "vbz", "rank": 0.006984736554390887, "text": "continues"}
+{"count": 2, "ids": [79], "pos": "nn", "rank": 0.006946561199936966, "text": "mix"}
+{"count": 1, "ids": [43], "pos": "nn", "rank": 0.006856257327710149, "text": "work"}
+{"count": 1, "ids": [77], "pos": "nns", "rank": 0.00683890968860727, "text": "inquiries"}
+{"count": 2, "ids": [12], "pos": "nn", "rank": 0.006791516675518717, "text": "activity"}
+{"count": 4, "ids": [22], "pos": "vbp", "rank": 0.006352741079284412, "text": "are"}
+{"count": 1, "ids": [39], "pos": "nn", "rank": 0.006219742644568537, "text": "software"}
+{"count": 1, "ids": [42], "pos": "nn", "rank": 0.005921601592259383, "text": "future"}
+{"count": 1, "ids": [18], "pos": "vbd", "rank": 0.005912410646766441, "text": "did"}
+{"count": 1, "ids": [86], "pos": "nns", "rank": 0.005878959910011457, "text": "investors"}
+{"count": 1, "ids": [11], "pos": "nn", "rank": 0.005844769069929653, "text": "lot"}
+{"count": 1, "ids": [62], "pos": "nns", "rank": 0.005808681244440417, "text": "data"}
+{"count": 2, "ids": [17], "pos": "nn", "rank": 0.00523637318081935, "text": "one"}
+{"count": 1, "ids": [57], "pos": "nns", "rank": 0.00514820514254908, "text": "breakthroughs"}
+{"count": 1, "ids": [44], "pos": "vbz", "rank": 0.0049658257764619695, "text": "domains"}
+{"count": 1, "ids": [30], "pos": "vbz", "rank": 0.004822794603742466, "text": "obsesses"}
+{"count": 1, "ids": [41], "pos": "vbz", "rank": 0.004822794603742466, "text": "focuses"}
+{"count": 1, "ids": [74], "pos": "nn", "rank": 0.004805244678673852, "text": "change"}
+{"count": 1, "ids": [89], "pos": "vbg", "rank": 0.004744584598662595, "text": "existing"}
+{"count": 1, "ids": [10], "pos": "vbn", "rank": 0.004731650855870237, "text": "seen"}
+{"count": 1, "ids": [71], "pos": "nn", "rank": 0.004689021717245515, "text": "technology"}
+{"count": 1, "ids": [48], "pos": "nn", "rank": 0.004689021717245515, "text": "hype"}
+{"count": 1, "ids": [28], "pos": "nn", "rank": 0.00457984481032457, "text": "couple"}
+{"count": 1, "ids": [26], "pos": "nn", "rank": 0.0044977024844243315, "text": "case"}
+{"count": 2, "ids": [82], "pos": "vbn", "rank": 0.004416745315153073, "text": "heard"}
+{"count": 1, "ids": [8], "pos": "nn", "rank": 0.0043870345582089415, "text": "goodness"}
+{"count": 2, "ids": [66], "pos": "vbg", "rank": 0.0038498307097600106, "text": "using"}
+{"count": 1, "ids": [32], "pos": "vbp", "rank": 0.00371237621932025, "text": "'ve"}
+{"count": 2, "ids": [9], "pos": "vbp", "rank": 0.0036870292660202537, "text": "have"}
+{"count": 1, "ids": [25], "pos": "nn", "rank": 0.003372123725303091, "text": "surface"}
+{"count": 1, "ids": [56], "pos": "nn", "rank": 0.003372123725303091, "text": "series"}
+{"count": 1, "ids": [60], "pos": "nn", "rank": 0.003372123725303091, "text": "phrase"}
+{"count": 1, "ids": [47], "pos": "nn", "rank": 0.003372123725303091, "text": "time"}
+{"count": 1, "ids": [70], "pos": "vbp", "rank": 0.003372123725303091, "text": "apply"}
+{"count": 1, "ids": [92], "pos": "nns", "rank": 0.002597451767903542, "text": "businesses"}
+{"count": 1, "ids": [75], "pos": "vbg", "rank": 0.0025941567475156733, "text": "getting"}
+{"count": 1, "ids": [83], "pos": "nns", "rank": 0.0023392277821036927, "text": "academics"}
+{"count": 1, "ids": [24], "pos": "vbz", "rank": 0.0018227798105039938, "text": "scratches"}
+{"count": 1, "ids": [55], "pos": "vbp", "rank": 0.0018227798105039938, "text": "represent"}
+{"count": 1, "ids": [81], "pos": "nn", "rank": 0.0018227798105039938, "text": "v1.0"}
+{"count": 2, "ids": [65], "pos": "nns", "rank": 0.0018227798105039938, "text": "founders"}
+{"count": 1, "ids": [69], "pos": "vbp", "rank": 0.0018227798105039938, "text": "favor"}
+{"count": 1, "ids": [91], "pos": "vb", "rank": 0.0018227798105039938, "text": "transform"}
+{"count": 1, "ids": [2], "pos": "vbd", "rank": 0.0018227798105039938, "text": "published"}
+{"count": 1, "ids": [19], "pos": "vbz", "rank": 0.0018227798105039938, "text": "feels"}
+{"count": 1, "ids": [72], "pos": "vbz", "rank": 0.0018227798105039938, "text": "'s"}
+{"count": 1, "ids": [84], "pos": "vbd", "rank": 0.0018227798105039938, "text": "came"}

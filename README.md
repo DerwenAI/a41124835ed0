@@ -1,0 +1,1 @@
+See the Docker container defined in https://github.com/montyz/nlp-12-14-2016

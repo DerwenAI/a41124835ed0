@@ -44,6 +44,17 @@ def is_not_word (word):
   return PAT_PUNCT.match(word) or PAT_SPACE.match(word)
 
 
+def load_stopwords (file):
+  stopwords = set([])
+
+  with open(file, "r") as f:
+    for line in f.readlines():
+      stopwords.add(line.strip().lower())
+
+  return stopwords
+
+
+
 def annotate (sent):
   global TAGGER
   ts = TAGGER.tag(sent)
@@ -61,17 +72,18 @@ def annotate (sent):
     yield WordNode(raw=raw, pos=pos, root=root)
 
 
+def parse_html (file):
+  for text in extract_html(file):
+    for sent in textblob.TextBlob(cleanup_text(text)).sentences:
+      yield [lex for lex in annotate(str(sent))]
+
+
+
 def pretty_print (obj, indent=False):
   if indent:
     return json.dumps(obj, sort_keys=True, indent=2, separators=(',', ': '))
   else:
     return json.dumps(obj, sort_keys=True)
-
-
-def parse_html (file):
-  for text in extract_html(file):
-    for sent in textblob.TextBlob(cleanup_text(text)).sentences:
-      yield [lex for lex in annotate(str(sent))]
 
 
 def full_parse (html_file, json_file):
@@ -86,16 +98,6 @@ def lex_iter (json_file):
     for line in f.readlines():
       for lex in list(map(WordNode._make, json.loads(line))):
         yield lex
-
-
-def load_stopwords (file):
-  stopwords = set([])
-
-  with open(file, "r") as f:
-    for line in f.readlines():
-      stopwords.add(line.strip().lower())
-
-  return stopwords
 
 
 if __name__ == "__main__":

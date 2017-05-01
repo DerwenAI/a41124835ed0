@@ -1,7 +1,7 @@
 # Set up for "Get Started with NLP in Python"
 
 This repo includes the notebooks, source data, and other materials for:
-[Get Started with Natural Language Processing in Python](https://www.safaribooksonline.com/live-training/courses/get-started-with-natural-language-processing-in-python/0636920065517/).
+[Get Started with Natural Language Processing in Python](https://synecdoche.liber118.com/natural-language-processing-in-python-832b0a99791b).
 
 
 ## Virtual Environment

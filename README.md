@@ -40,6 +40,9 @@ Results should look very much like the original results, although in general NTL
 has problems, e.g., it doesn't handle punctuation properly.
 - kudos @blue_slacker
 
+*NB: these course materials will shift from TextBlob to spaCy, soon, although the latter still 
+has a few rough edges*
+
 ## Docker support (needs update)
 A *Docker container* -- courtesy of @montyz, @ashapochka -- was
 defined for an instance of this course a few months ago. May need

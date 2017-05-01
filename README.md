@@ -3,11 +3,21 @@
 This repo includes the notebooks, source data, and other materials for:
 [Get Started with Natural Language Processing in Python](https://www.safaribooksonline.com/live-training/courses/get-started-with-natural-language-processing-in-python/0636920065517/).
 
+
+## Virtual Environment
+
 It's a good idea to use [virtualenv](https://virtualenv.pypa.io/) to
 manage your Python 3 virtual environment:
 ```
 virtualenv -p /usr/bin/python3 ~/venv
 ```
+
+Then run:
+```
+source ~/venv/bin/activate
+```
+
+## Installation
 
 To install the required Python libraries and related data sets:
 ```
@@ -15,7 +25,7 @@ pip install -r requirements.txt
 python -m nltk.downloader punkt
 python -m nltk.downloader wordnet
 python -m textblob.download_corpora
-python -m spacy.en.download all
+python -m spacy download en
 ```
 
 ## Docker support (needs update)

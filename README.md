@@ -31,8 +31,8 @@ which uses the NLTK perceptron tagger instead. Source code for `nltk.tag.percept
 it's a port of the TextBlob code. Not exactly -- however there may be issues on some versions of 
 Windows.
 
-If you run `pip install textblob` and DO NOT install `textblob-aptagger` that should work 
-with minor changes to **Exercise 3** code and the `pynlp.py` module:
+If you run `pip install textblob` and DO NOT install `textblob-aptagger` that should work fine 
+with only minor changes to **Exercise 3** code and the `pynlp.py` module:
 
   * change `import textblob_aptagger as tag` to `import nltk`
   * change `tag.PerceptronTagger()` to `nltk.tag.PerceptronTagger()`

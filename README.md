@@ -29,7 +29,9 @@ python -m spacy download en
 The GitHub page for `textblob-aptagger` says the package is no longer needed as of TextBlob 0.11.0, 
 which uses the NLTK perceptron tagger instead. Source code for `nltk.tag.perceptron` claims that 
 it's a port of the TextBlob code. Not exactly -- however there may be issues on some versions of 
-Windows. If you run `pip install textblob` and DO NOT install `textblob-aptagger` that should worked 
+Windows.
+
+If you run `pip install textblob` and DO NOT install `textblob-aptagger` that should work 
 with minor changes to **Exercise 3** code and the `pynlp.py` module:
 
   * change `import textblob_aptagger as tag` to `import nltk`

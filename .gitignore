@@ -1,3 +1,6 @@
+*.json
+w2v/*.dat
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

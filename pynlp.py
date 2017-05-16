@@ -31,7 +31,7 @@ def extract_html (file):
 
 def cleanup_text (text):
   x = " ".join(map(lambda x: x.strip(), text.split("\n"))).strip()
-  unicodedata.normalize('NFKD', x).encode('ascii','ignore')
+  x = unicodedata.normalize('NFKD', x).encode('ascii', 'ignore')
   x = x.replace('“', '"').replace('”', '"')
   x = x.replace("‘", "'").replace("’", "'")
   x = x.replace('…', '...').replace('–', '-')

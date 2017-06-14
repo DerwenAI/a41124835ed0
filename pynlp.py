@@ -21,99 +21,104 @@ WordNode = namedtuple('WordNode', 'raw, root, pos')
 
 
 def extract_html (file):
-  with open(file, "r") as f:
-    soup = BeautifulSoup(f, "html.parser")
+    with open(file, "r") as f:
+        soup = BeautifulSoup(f, "html.parser")
 
-    for div in soup.find_all("div", id="article-body"):
-      for p in div.find_all("p"):
-        yield p.get_text()
+        for div in soup.find_all("div", id="article-body"):
+            for p in div.find_all("p"):
+                yield p.get_text()
 
 
 def cleanup_text (text):
-  x = " ".join(map(lambda x: x.strip(), text.split("\n"))).strip()
-  x = unicodedata.normalize('NFKD', x).encode('ascii', 'ignore')
-  x = x.replace('“', '"').replace('”', '"')
-  x = x.replace("‘", "'").replace("’", "'")
-  x = x.replace('…', '...').replace('–', '-')
+    x = " ".join(map(lambda x: x.strip(), text.split("\n"))).strip()
 
-  return x
+    x = x.replace('“', '"').replace('”', '"')
+    x = x.replace("‘", "'").replace("’", "'").replace("`", "'")
+    x = x.replace("`` ", '"').replace("''", '"')
+    x = x.replace('…', '...').replace('–', '-')
+    x = x.replace("\\u00a0", " ").replace("\\u2014", " - ").replace("\\u2022", "*")
+    x = x.replace("\\u2019", "'").replace("\\u201c", '"').replace("\\u201d", '"')
+
+    x = str(unicodedata.normalize('NFKD', x).encode('ascii', 'ignore').decode('utf-8'))
+
+    return x
 
 
 def is_not_word (word):
-  global PAT_PUNCT, PAT_SPACE
-  return PAT_PUNCT.match(word) or PAT_SPACE.match(word)
+    global PAT_PUNCT, PAT_SPACE
+    return PAT_PUNCT.match(word) or PAT_SPACE.match(word)
 
 
 def load_stopwords (file):
-  stopwords = set([])
+    stopwords = set([])
 
-  with open(file, "r") as f:
-    for line in f.readlines():
-      stopwords.add(line.strip().lower())
+    with open(file, "r") as f:
+        for line in f.readlines():
+            stopwords.add(line.strip().lower())
 
-  return stopwords
+    return stopwords
 
 
 
 def annotate (sent):
-  global TAGGER
-  ts = TAGGER.tag(sent)
+    global TAGGER
+    ts = TAGGER.tag(sent)
 
-  for raw, pos in ts:
-    pos_kind = pos[0].lower()
-    w = textblob.Word(raw.lower())
-    root = str(w)
+    for raw, pos in ts:
+        pos_kind = pos[0].lower()
+        w = textblob.Word(raw.lower())
+        root = str(w)
 
-    if is_not_word(raw[0]) or (pos == "SYM"):
-      pos = "."
-    elif pos_kind in ["n", "v"]:
-      root = w.lemmatize(pos_kind)
+        if is_not_word(raw[0]) or (pos == "SYM"):
+            pos = "."
+        elif pos_kind in ["n", "v"]:
+            root = w.lemmatize(pos_kind)
 
-    yield WordNode(raw=raw, pos=pos, root=root)
+        yield WordNode(raw=raw, pos=pos, root=root)
 
 
 def parse_html (file):
-  for text in extract_html(file):
-    for sent in textblob.TextBlob(cleanup_text(text)).sentences:
-      yield [lex for lex in annotate(str(sent))]
+    for text in extract_html(file):
+        for sent in textblob.TextBlob(cleanup_text(text)).sentences:
+            yield [lex for lex in annotate(str(sent))]
 
 
 
 def pretty_print (obj, indent=False):
-  if indent:
-    return json.dumps(obj, sort_keys=True, indent=2, separators=(',', ': '))
-  else:
-    return json.dumps(obj, sort_keys=True)
+    if indent:
+        return json.dumps(obj, sort_keys=True, indent=2, separators=(',', ': '))
+    else:
+        return json.dumps(obj, sort_keys=True)
 
 
 def full_parse (html_file, json_file):
-  with open(json_file, "w") as f:
-    for sent_lex in parse_html(html_file):
-      f.write(pretty_print(sent_lex))
-      f.write("\n")
+    with open(json_file, "w") as f:
+        for sent_lex in parse_html(html_file):
+            f.write(pretty_print(sent_lex))
+            f.write("\n")
 
 
 def lex_iter (json_file):
-  with open(json_file, "r") as f:
-    for line in f.readlines():
-      for lex in list(map(WordNode._make, json.loads(line))):
-        yield lex
+    with open(json_file, "r") as f:
+        for line in f.readlines():
+            for lex in list(map(WordNode._make, json.loads(line))):
+                yield lex
 
 
 if __name__ == "__main__":
-  if len(sys.argv) != 2:
-    print("Usage: ./pynlp.py <HTML file>")
-    sys.exit(-1)
+    if len(sys.argv) != 2:
+        print("Usage: ./pynlp.py <HTML file>")
+        sys.exit(-1)
 
-  file = sys.argv[1]
-  print(file)
+    file = sys.argv[1]
+    print(file)
 
-  for text in extract_html(file):
-    clean = cleanup_text(text)
-    print(clean)
+    for text in extract_html(file):
+        clean = cleanup_text(text)
+        print(clean)
 
-    for sent in textblob.TextBlob(clean).sentences:
-      print(">", sent)
+        for sent in textblob.TextBlob(clean).sentences:
+            print(">", sent)
 
-      for lex in annotate(str(sent)):
-        print(lex)
+            for lex in annotate(str(sent)):
+                print(lex)

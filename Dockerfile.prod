@@ -1,0 +1,17 @@
+FROM jupyter/minimal-notebook:latest
+
+# Install requirements
+
+WORKDIR /tmp
+ADD requirements.txt .
+RUN pip install -r requirements.txt
+
+# Set the working directory
+ADD . /user/jovyan
+WORKDIR /user/jovyan
+
+# Expose the notebook port
+EXPOSE 8888
+
+# Start the notebook server
+CMD jupyter notebook --no-browser --port 8888 --ip=*

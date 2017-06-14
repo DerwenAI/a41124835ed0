@@ -16,6 +16,7 @@ source ~/venv/bin/activate
 ```
 
 ## Installation
+
 To install the required Python libraries and related data sets:
 ```
 pip install -r requirements.txt
@@ -33,3 +34,10 @@ defined for an instance of this course a few months ago:
 
 That's been extended by @odewahn to run on [Launchbot](https://launchbot.io) 
 and [JupyterHub](https://jupyterhub.readthedocs.io/en/latest/)
+
+## Command line test
+
+To exercise the code in the `pynlp` library:
+```
+python pynlp.py html/article1.html a1.json
+```

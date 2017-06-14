@@ -1,4 +1,5 @@
 beautifulsoup4==4.6.0
 datasketch==1.2.1
+gensim==2.1.0
 spacy==1.8.2
 textblob==0.12.0

@@ -1,7 +1,6 @@
 FROM jupyter/minimal-notebook:latest
 
 # Install requirements
-
 WORKDIR /tmp
 ADD requirements.txt .
 RUN pip install -r requirements.txt
@@ -13,6 +12,9 @@ RUN python -m spacy download en
 # Set the working directory
 ADD . /user/jovyan
 WORKDIR /user/jovyan
+
+# Make the student-edited files writable
+RUN for i in "a1.json", "a2.json", "a3.json", "a4.json", "model.dat" ; do touch $i ; chmod o+w $i ; done
 
 # Expose the notebook port
 EXPOSE 8888

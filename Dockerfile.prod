@@ -5,6 +5,10 @@ FROM jupyter/minimal-notebook:latest
 WORKDIR /tmp
 ADD requirements.txt .
 RUN pip install -r requirements.txt
+RUN python -m nltk.downloader punkt
+RUN python -m nltk.downloader wordnet
+RUN python -m textblob.download_corpora
+RUN python -m spacy download en
 
 # Set the working directory
 ADD . /user/jovyan

@@ -88,7 +88,7 @@ def parse_html (html_file, debug=False):
         SPACY_NLP = spacy.load("en")
 
     for text in extract_html(html_file):
-        doc = SPACY_NLP(cleanup_text(text), parse=True)
+        doc = SPACY_NLP(cleanup_text(text))
 
         for span in doc.sents:
             yield [lex for lex in annotate(doc, span, debug)]

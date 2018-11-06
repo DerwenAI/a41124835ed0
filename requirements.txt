@@ -1,6 +1,5 @@
-beautifulsoup4==4.6.0
-datasketch==1.2.1
-gensim==2.1.0
-spacy==1.8.2
-textblob==0.12.0
-git+git://github.com/dunovank/jupyter-themes.git
+beautifulsoup4==4.6.3
+datasketch==1.2.10
+gensim==3.6.0
+textblob==0.15.1
+spacy==2.0.16

@@ -32,7 +32,7 @@ pip install jupyterlab
 
 ## Installation on an Ubuntu server in a cloud
 
-Alternatively, if you want install all of the required dependencies and run from an Ubuntu VM in the cloud, see the notes in [INSTALL.md](https://github.com/DerwenAI/a41124835ed0/blob/master/INSTALL.md).
+Alternatively, if you want install all of the required dependencies and run from an Ubuntu VM in the cloud, see the notes in [INSTALL.md](https://github.com/DerwenAI/a41124835ed0/blob/master/INSTALL.md)
 
 ## Command line test
 

@@ -4,8 +4,6 @@
 sudo bash
 apt-get update
 
-apt-get install emacs-nox lynx
-apt-get install lynx
 apt-get install virtualenv python-pip
 apt-get install python-dev python3-dev libevent-dev
 apt-get install ipython ipython-notebook
@@ -19,14 +17,12 @@ exit
 
 virtualenv -p /usr/bin/python3 ~/venv
 source ~/venv/bin/activate
-
-pip install jupyter
-pip install jupyterlab
 ```
 
 
 ## Install Course Dependencies
 
+```
 git clone https://github.com/DerwenAI/a41124835ed0.git
 
 pip install -r requirements.txt
@@ -35,6 +31,9 @@ python -m nltk.downloader wordnet
 python -m textblob.download_corpora
 python -m spacy download en
 
+pip install jupyter
+pip install jupyterlab
+```
 
 ## Launch Jupyter
 
@@ -48,5 +47,5 @@ jupyter-notebook --no-browser --port=8888 --NotebookApp.token='' --ip='0.0.0.0' 
 Then use your server's IP address in the following format:
 
 ```
-http://35.230.75.16:8888/
+http://<ip_addr>:8888/
 ```

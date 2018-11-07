@@ -26,15 +26,6 @@ python -m textblob.download_corpora
 python -m spacy download en
 ```
 
-## Docker support
-
-A *Docker container* -- courtesy of @montyz, @ashapochka -- was
-defined for an instance of this course a few months ago:
-[https://github.com/montyz/nlp-12-14-2016](https://github.com/montyz/nlp-12-14-2016)
-
-That's been extended by @odewahn to run on [Launchbot](https://launchbot.io) 
-and [JupyterHub](https://jupyterhub.readthedocs.io/en/latest/)
-
 ## Command line test
 
 To exercise the code in the `pynlp` library:
